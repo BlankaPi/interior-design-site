@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* FONTS */
+
+$font-serif: 'DM Serif Display', serif;
+$font-san-serif: 'Jost', sans-serif;
+
+/* COLORS */
+$color-brown: hsl(31, 47%, 63%);
+$color-blue: hsl(212, 14%, 19%);
+$color-offwhite: hsl(30, 27%, 94%);
+
+/* WIDTH */
+$container-width-lg: 70%;
+$container-width-md: 90%;
+
+/*TRANSITION */
+$transition: all 350ms ease;
+
+/*ANIMATIONS*/
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

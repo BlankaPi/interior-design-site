@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.motto__container {
+    @include flex(row, center, center);
+
+    &-text {
+        @include flex(column, flex-start, flex-start);
+        flex: 0.7;
+
+        > p {
+            margin: 2rem 0 2rem;
+        }        
+    }
+
+    &-img {
+        flex: 1;
+        margin-left: 4.5rem;    
+
+        img {
+            border-top-right-radius: 20vw;
+            border-bottom-left-radius: 10vw;
+        }
+    }
+}
+
+.call {
+    @include flex(row, flex-start, center);
+    margin-bottom: 2rem;
+
+    img {
+        width: 90px;
+        height: 90px;
+        margin-right: 1rem;    
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .motto__container-text {
+        flex: 1;
+    }
+
+    .motto__container-img {
+        margin-left: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .motto__container {
+        flex-direction: column;
+    }    
+
+    .motto__container-img {
+        display: none;     
+    }
+}
+
+
+

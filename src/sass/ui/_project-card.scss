@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+
+.project-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 100%;  
+
+        &:hover .toggle-text {
+            opacity: 0.8;
+        }
+        
+        img, .toggle-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;   
+        }
+
+        .toggle-text {
+            padding: 2rem;
+            background: $color-offwhite;
+            opacity: 0;
+            transition: $transition;
+        }
+    }
+
+    &__text {
+        @include flex(row, space-between, center);
+        text-align: left;
+        margin-top: 1rem;
+    }    
+}
+

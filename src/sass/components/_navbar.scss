@@ -1,0 +1,109 @@
+@use "../abstracts" as *;
+
+nav {
+    height: 6rem;
+    width: 100vw;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+// only shows on medium and small screens
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__container {
+    @include flex(row, space-between, center);
+    height: 100%;
+    position: relative;
+
+    &.container {
+        margin: 0 auto;
+    }
+}
+
+.nav__links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+
+    a {
+        transition: $transition;
+
+        &:hover {
+            color: $color-brown;
+        }
+    }
+
+    .active {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background: #fff;
+            left: calc(50% - 0.75rem);
+            margin-top: 1.5rem;
+            position: absolute;
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1050px) {
+    .nav__toggle-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        font-size: 1.8rem;
+        cursor: pointer;
+        border: none;
+    }
+
+    .nav__toggle-btn svg {
+        color: $color-blue;
+    }
+
+    .nav__links {
+        position: absolute;
+        width: 160px;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: $color-offwhite;
+    }
+
+    .nav__links li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__links a {
+        padding: 0.4rem 3rem;
+        height: 100%;
+        line-height: 2rem;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .shov_nav {
+        display: flex;
+    }
+
+    .hide_nav {
+        display: none;
+    }
+}
