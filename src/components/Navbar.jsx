@@ -6,7 +6,7 @@ import Logo from "../images/Logo.svg"
 //import * as FaIcons from "react-icons/fa";
 import * as RiIcons from "react-icons/ri";
 import { links } from "../data"
-import "../sass/main.scss"
+import "../sass/components/_navbar.scss"
 
 const Navbar = () => {
 
