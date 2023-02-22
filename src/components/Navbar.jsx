@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from 'react';
 
 import Logo from "../images/Logo.svg"
-//import * as FaIcons from "react-icons/fa";
+
 import * as RiIcons from "react-icons/ri";
 import { links } from "../data"
 import "../sass/components/navbar.scss"
