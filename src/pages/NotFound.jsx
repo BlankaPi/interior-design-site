@@ -5,6 +5,8 @@ import HeaderImage from "../images/404.jpg"
 
 import * as RiIcons from "react-icons/ri";
 
+import "../sass/pages/notfound.scss"
+
 const NotFound = () => {
   return (
     <>

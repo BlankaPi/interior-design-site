@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Logo from "../images/Logo.svg"
 import * as RiIcons from "react-icons/ri";
-import "../sass/components/_footer.scss"
+import "../sass/components/footer.scss"
 
 const Footer = () => {
     return (

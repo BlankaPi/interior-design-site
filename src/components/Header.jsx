@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "../sass/main.scss"
+import "../sass/components/header.scss"
 
 import * as RiIcons from "react-icons/ri";
 

@@ -9,7 +9,7 @@
     min-height: 300px;
 
     > div {
-        @include flex(row, flex-start, center)
+        @include flex(row, flex-start, flex-start)
     }
 
     > p {
@@ -20,6 +20,7 @@
         width: 77px;
         height: 77px;
         margin-right: 1rem;
+        border-radius: 100%;
     }
 }
 

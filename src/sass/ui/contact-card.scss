@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.contact-card {
+    background: $color-offwhite;
+    border-radius: 3rem;
+    @include flex(column, space-between, flex-start);
+    padding: 2rem 1.5rem;
+    min-height: 300px;
+
+    div {
+        @include flex(row, flex-start, center);
+    }
+
+    .media {
+        width: 60%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn-circle {
+        @include flex(column, center, center);
+        background: #fff;
+        margin-right: 1rem;
+    }
+}
+

@@ -3,12 +3,7 @@
 .gallery {
     display: flex;
     flex-direction: column;
-    text-align: center;
-
-    &>p {
-        margin: 1rem auto 3rem;
-        max-width: 70%;
-    }
+    
 
     /* SMALL GALLERY ON HOMEPAGE*/
 
@@ -93,11 +88,6 @@
         column-gap: 1rem;
         row-gap: 1rem;
         margin-bottom: 1rem;
-    }
-
-    .project-card__text .btn-circle {
-        width: 45px;
-        height: 45px;
     }
 }
 

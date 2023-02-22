@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+.blog {
+    @include flex(column, space-between, center);
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    border: 1px solid rgba($color-blue-hover, 0.3);
+    border-radius: 3rem;
+    min-height: 450px;
+
+    h3 {
+        margin-bottom: auto;
+        text-align: left;
+    }
+
+    &-img {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+        margin-bottom: 1rem;
+        transition: $transition;
+        @include grayscale(100%);
+
+        img {
+            transition: $transition;
+            object-fit: cover;
+        }
+
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            margin: 1rem;
+            padding: 0.25rem;
+        }
+    }
+
+    &-date {
+        width: 100%;
+        @include flex(row, space-between, center);
+    }
+
+    &:hover .blog-img {
+        @include grayscale(0%)
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+
+        &-img {
+            border-top-right-radius: 2.5rem;
+            border-top-left-radius: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .blog {
+        min-height: 380px;
+        max-height: 400px;
+    }
+}

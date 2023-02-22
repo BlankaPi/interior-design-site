@@ -1,5 +1,4 @@
-import React from 'react';
-import { testimonials } from '../data';
+import React, { useState, useEffect } from 'react';
 import { OpinionCard } from '../UI/Card';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,9 +8,23 @@ import { Pagination } from "swiper";
 import { Autoplay } from 'swiper';
 import "swiper/css/autoplay";
 
-import "../sass/main.scss"
+import "../sass/components/testimonials.scss"
 
 const Testimonials = () => {
+
+    // const [comment, setComment] = useState();
+
+    const [allComments, setAllComments] = useState([]);
+
+    useEffect(() => {
+        async function getComments() {
+            const res = await fetch("https://63f4c6232213ed989c4a222e.mockapi.io/comments")
+            const data = await res.json()
+            setAllComments(data)
+        }
+        getComments()
+    }, [])
+
     return (
         <section className='container testimonials'>
             <h1 className='testimonials__header'>What the People Thinks About Us</h1>
@@ -32,10 +45,17 @@ const Testimonials = () => {
                     className="mySwiper"
                 >
                     {
-                        testimonials.map(({ name, adress, quote, avatar}, index) => {
+                        allComments.map(({ ...element }, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <OpinionCard name={name} adress={adress} quote={quote} avatar={avatar} />
+                                    <OpinionCard 
+                                    name={element.name} 
+                                    city={element.city} 
+                                    country={element.country} 
+                                    quote={element.quote} 
+                                    avatar={element.avatar} 
+                                    comment={element.comment}
+                                    />
                                 </SwiperSlide >
                             )
                         })

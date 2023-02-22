@@ -1,0 +1,152 @@
+@use "../abstracts" as *;
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+}
+
+;
+
+.container {
+    width: $container-width-lg;
+    max-width: 1920px;
+    margin: 10rem auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+    justify-content: center;
+}
+
+.logo {
+    width: 11rem;
+    display: block;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 5rem;
+    max-width: 70%;
+
+    h1 {
+      margin-bottom: 1rem;  
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 5rem auto;
+    }
+
+    .grid {
+        column-gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    @include flex(row, center, center);
+    color: #fff;
+    font-weight: 600;
+    background: $color-blue;
+    padding: 25px 45px;
+    border-radius: 1rem;
+    transition: $transition;
+
+    svg {
+        margin-left: 0.5rem;
+        color: $color-brown;
+        font-size: 2rem;
+    }
+
+    &:hover {
+        background: $color-blue-hover;
+    }
+
+    &-circle {
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 100%;
+        background: $color-offwhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            color: var(--color-blue);
+            font-size: 1.5rem;
+        }
+    }
+
+    &-sm {
+        @include flex(row, center, center);
+
+        svg {
+            color: $color-brown;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .btn {
+        padding: 20px 36px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 16px 28px;
+    }
+
+    .btn-circle {
+        min-width: 45px;
+        min-height: 45px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        padding: 12px 18px;
+    }
+}

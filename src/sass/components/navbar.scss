@@ -95,7 +95,7 @@ nav {
         line-height: 2rem;
     }
 
-    .active::after {
+    .nav__links .active::after {
         display: none;
     }
 

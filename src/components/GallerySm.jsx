@@ -1,13 +1,16 @@
 import React from 'react';
 import { gallery } from '../data';
 import { ProjectCard } from '../UI/Card';
-import "../sass/main.scss"
+import SectionTitle from './SectionTitle';
+import "../sass/components/gallery.scss"
 
 const GallerySm = () => {
     return (
         <article className='container gallery small'>
-            <h1>Follow Our Projects</h1>
-            <p>It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+            <SectionTitle
+                header="Follow Our Projects"
+                text="It is a long established fact that a reader will be distracted by the of readable content of page lookings at its layouts points."
+            />
             <div className='gallery-small__container'>
                 {
                     gallery.map(({ image, title, description, path, text }, index) => {

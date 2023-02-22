@@ -7,7 +7,7 @@ import { MainHeader } from '../components/Header';
 import Motto from '../components/Motto';
 import Testimonials from '../components/Testimonials';
 import GallerySm from '../components/GallerySm';
-import "../sass/main.scss"
+import Blog from '../components/Blog';
 
 
 const Home = () => {
@@ -28,6 +28,7 @@ const Home = () => {
       <Motto />
       <Testimonials />
       <GallerySm />
+      <Blog />
     </>
 
   )

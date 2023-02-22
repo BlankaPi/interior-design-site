@@ -11,3 +11,11 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin grayscale($value) {
+    filter: grayscale($value);
+        -webkit-filter: grayscale($value);
+        -moz-filter: grayscale($value);
+        -ms-filter: grayscale($value);
+        -o-filter: grayscale($value);
+}

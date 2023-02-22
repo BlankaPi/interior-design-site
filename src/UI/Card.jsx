@@ -1,7 +1,7 @@
 import React from "react";
 import * as RiIcons from "react-icons/ri";
 import { Link } from "react-router-dom";
-import "../sass/main.scss"
+import "../sass/ui/_index.scss";
 
 
 const Card = ({ title, text, path }) => {
@@ -9,27 +9,27 @@ const Card = ({ title, text, path }) => {
         <article className="card">
             <h3>{title}</h3>
             <p>{text}</p>
-            <Link to={path} className='btn-sm'>Learn more <RiIcons.RiArrowRightLine/></Link>
+            <Link to={path} className='btn-sm'>Learn more <RiIcons.RiArrowRightLine /></Link>
         </article>
     )
 }
 
-const OpinionCard = ({ name, adress, quote, avatar, id }) => {
+const OpinionCard = (props) => {
     return (
         <article className="opinion-card">
             <div>
-                <img src={avatar} alt="avatar" className='opinion-card-img'></img>
+                <img src={props.avatar} alt="avatar" className='opinion-card-img'></img>
                 <div>
-                    <h3>{name}</h3>
-                    <p>{adress}</p>
+                    <h3>{props.name}</h3>
+                    <p>{props.city}, {props.country}</p>
                 </div>
             </div>
-            <p>{quote}</p>
+            <p>{props.comment}</p>
         </article>
     )
 }
 
-const ProjectCard = ({image, title, description, path, text}) => {
+const ProjectCard = ({ image, title, description, path, text }) => {
     return (
         <article className="project-card">
             <div className="project-card__img">
@@ -41,10 +41,44 @@ const ProjectCard = ({image, title, description, path, text}) => {
                     <h3>{title}</h3>
                     <p>{description}</p>
                 </div>
-                <Link to={path} className='btn-circle'><RiIcons.RiArrowRightSLine/></Link>
+                <Link to={path} className='btn-circle'><RiIcons.RiArrowRightSLine /></Link>
             </div>
         </article>
     )
 }
 
-export { Card, OpinionCard, ProjectCard } ;
+const ContactCard = (props) => {
+    return (
+        <article className="contact-card">
+            <div>
+                <div className='btn-circle'><RiIcons.RiAtLine /></div>
+                <p>info@yourdomain.com</p>
+            </div>
+            <div>
+                <div className='btn-circle'><RiIcons.RiPhoneLine /></div>
+                <p>+1 (378) 400-1234</p>
+            </div>
+            <div>
+                <div className='btn-circle'><RiIcons.RiComputerLine /></div>
+                <p>www.yourdomain.com</p>
+            </div>
+            <div className="media">
+                <a href='https://linkedin.com/' target="_blank" rel="noreferrer noopener">
+                    <RiIcons.RiLinkedinBoxFill />
+                </a>
+                <a href='https://facebook.com/' target="_blank" rel="noreferrer noopener">
+                    <RiIcons.RiFacebookCircleFill />
+                </a>
+                <a href='https://twitter.com/' target="_blank" rel="noreferrer noopener">
+                    <RiIcons.RiTwitterFill />
+                </a>
+                <a href='https://instagram.com/' target="_blank" rel="noreferrer noopener">
+                    <RiIcons.RiInstagramFill />
+                </a>
+
+            </div>
+        </article>
+    )
+}
+
+export { Card, OpinionCard, ProjectCard, ContactCard };

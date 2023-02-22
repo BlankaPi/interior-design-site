@@ -3,7 +3,7 @@ import * as RiIcons from "react-icons/ri";
 import { Link } from "react-router-dom";
 import motto from "../images/Motto.jpg";
 import call from "../images/Call Icon.png";
-import "../sass/main.scss";
+import "../sass/components/motto.scss";
 
 const Motto = () => {
     return (

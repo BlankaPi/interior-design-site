@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.offwhite {
+    background: $color-offwhite;
+    border-radius: 5rem;
+    padding: 8rem 6rem;
+
+    .service-details .work-detail {
+        &:nth-child(2) {
+            .details {
+                grid-column: 1;
+                grid-row: 1/2;
+            }
+
+            .img {
+                grid-column: 2;
+                grid-row: 1/2;
+            }
+        }
+
+        &:nth-child(4) {
+            .details {
+                grid-column: 1;
+                grid-row: 1/2;
+            }
+
+            .img {
+                grid-column: 2;
+                grid-row: 1/2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offwhite {
+        padding: 4rem 3rem; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .offwhite {    
+        .service-details .work-detail {
+            &:nth-child(2) {
+                .details {
+                    grid-column: 1;
+                    grid-row: 2/3;
+                }
+    
+                .img {
+                    grid-column: 1;
+                    grid-row: 1/2;
+                }
+            }
+    
+            &:nth-child(4) {
+                .details {
+                    grid-column: 1;
+                    grid-row: 2/3;
+                }
+    
+                .img {
+                    grid-column: 1;
+                    grid-row: 1/2;
+                }
+            }
+        }
+    }
+}

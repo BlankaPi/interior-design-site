@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-body {
+body, input, textarea {
     font-family: $font-san-serif;
     color: $color-blue;
 }
@@ -28,7 +28,7 @@ p {
     letter-spacing: 0.01em;
 }
 
-a {
+a, button, input, textarea {
     color: $color-blue;
     font-size: 1.2rem;
 }
@@ -49,7 +49,7 @@ a {
         font-size: 1.3rem;
     }
 
-    p, a {
+    p, a, button, input, textarea {
         font-size: 1.1rem;
     }
 }
@@ -68,7 +68,7 @@ a {
         font-size: 1rem;
     }
 
-    p, a {
+    p, a, button, input, textarea {
         font-size: 0.9rem;
     }
 }

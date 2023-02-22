@@ -1,5 +1,5 @@
 import React from 'react'
-import "../sass/main.scss"
+import "../sass/pages/about.scss"
 
 import { Header } from '../components/Header'
 import HeaderImage from "../images/Banner-1.png"

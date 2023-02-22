@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+article {
+    .contact-container {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    article .contact-container {
+        grid-template-columns: 1fr;
+    }
+}

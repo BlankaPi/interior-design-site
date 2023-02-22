@@ -51,65 +51,6 @@ export const stages = [
     }
 ]
 
-export const testimonials = [
-    {
-        id: 1,
-        name: "Nattasha Mith",
-        adress: "New York, USA",
-        quote: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
-        avatar: require("./images/Testimonial-1.png")
-    },
-    {
-        id: 2,
-        name: "Ray Gala",
-        adress: "Sydney, Australia",
-        quote: "Lorem Ipsum is simply dummytext of the typesetting industry.Ipsum has been scrambled.",
-        avatar: require("./images/Testimonial-2.png")
-    },
-    {
-        id: 3,
-        name: "Benny Roll",
-        adress: "New York, USA",
-        quote: "Lorem Ipsum is simply dummy of the typesetting industry. Ipsum has been scrambled.",
-        avatar: require("./images/Testimonial-3.png")
-    },
-    {
-        id: 4,
-        name: "Danie Vin",
-        adress: "Oklahoma, USA",
-        quote: "Doloribus, ex.Sit consequatur voluptatibus amet placeat quibusdam vero officiis quisquam.",
-        avatar: require("./images/Testimonial-1.png")
-    },
-    {
-        id: 5,
-        name: "Matt Welsh",
-        adress: "Sydney, USA",
-        quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum magni consectetur quisquam.",
-        avatar: require("./images/Testimonial-2.png")
-    },
-    {
-        id: 6,
-        name: "Benny Roll",
-        adress: "New York, USA",
-        quote: "Lorem Ipsum is simply dummy of the typesetting industry. Ipsum has been scrambled.",
-        avatar: require("./images/Testimonial-3.png")
-    },
-    {
-        id: 7,
-        name: "Dan Vinyo",
-        adress: "Oklahoma, USA",
-        quote: "Doloribus, ex.Sit consequatur voluptatibus amet placeat quibusdam vero officiis.",
-        avatar: require("./images/Testimonial-1.png")
-    },
-    {
-        id: 8,
-        name: "Matt Welsh",
-        adress: "Sydney, USA",
-        quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum magni consectetur.",
-        avatar: require("./images/Testimonial-2.png")
-    },
-]
-
 export const gallery = [
     {
         id: 1,
@@ -245,5 +186,40 @@ export const services = [
         title: "Decoration Work",
         text: "There are many variations of the passages of lorem Ipsum from available, majority.",
         path: "/dozrobienia"
+    }
+]
+
+export const workDetails = [
+    {
+        id: 1,
+        title: "Concept & Details",
+        text: "It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        image: require("./images/Work-1.png"),
+        icon: require("./images/Icon-1.png"),
+        number: "01"
+    },
+    {
+        id: 2,
+        title: "Idea for Work",
+        text: "It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        image: require("./images/Work-2.png"),
+        icon: require("./images/Icon-2.png"),
+        number: "02"
+    },
+    {
+        id: 3,
+        title: "Design",
+        text: "It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        image: require("./images/Work-3.png"),
+        icon: require("./images/Icon-3.png"),
+        number: "03"
+    },
+    {
+        id: 4,
+        title: "Perfection",
+        text: "It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.",
+        image: require("./images/Work-4.png"),
+        icon: require("./images/Icon-4.png"),
+        number: "04"
     }
 ]
